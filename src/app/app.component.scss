@@ -1,0 +1,16 @@
+div.bg{
+    width: 100%;
+    min-height: 100vh;
+    animation: 6s animatebg infinite linear alternate;
+    @keyframes animatebg {
+        0%{
+            background-color: #512da8;
+        }
+        50%{
+            background-color: #00838f;
+        } 
+        100%{
+            background-color: #1976d2;
+        }
+    }
+}

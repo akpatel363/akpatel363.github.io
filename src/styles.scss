@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+.btn {
+  background: chocolate;
+  color: white;
+  text-decoration: none;
+  padding: 0.4em 0.5em;
+  display: inline-block;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.btn:focus {
+  outline: none;
+}

@@ -1,0 +1,11 @@
+<div class="backdrop" *ngIf="p" (click)="closeDetails()"></div>
+<div class="details-card" @detailsAnim *ngIf="p">
+    <div class="content">
+        <h2>{{ p.name }}</h2>
+        <span class="badge">{{ p.language }}</span>
+        <h4>Created on {{ p.created_at|date:'short' }}</h4>
+        <p>{{ p.description|default }}</p>
+        <a [href]="p.html_url" class="btn btn-details btn-repo">Repository</a>
+        <a *ngIf="p.homepage&&p.homepage!=''" [href]="p.homepage" class="btn btn-details btn-visit">Visit</a>
+    </div>
+</div>

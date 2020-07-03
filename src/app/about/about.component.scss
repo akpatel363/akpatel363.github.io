@@ -1,0 +1,49 @@
+@use '../global.scss';
+div.container {
+  overflow: hidden;
+  color: white;
+}
+a.btn-projects {
+  background-color: crimson;
+  margin: 2em 0;
+  font-size: 1.2em;
+  transform-origin: center;
+  animation: 5s 1s buttonanim infinite;
+  @keyframes buttonanim {
+    0% {
+      transform: rotate(6deg);
+    }
+    2% {
+      transform: rotate(-6deg);
+    }
+    4% {
+      transform: rotate(6deg);
+    }
+    6% {
+      transform: rotate(-6deg);
+    }
+    8% {
+      transform: rotate(0deg);
+    }
+  }
+}
+.profile-card {
+  text-align: center;
+  padding: 2em;
+  h1.title {
+    font-weight: 1000;
+    padding: 30px 0;
+    font-size: 4rem;
+  }
+  p {
+    margin: 0 auto 1em;
+    font-size: 1.3em;
+    max-width: 500px;
+  }
+  @include global.responsive(700px) {
+    padding: 1em;
+    h1.title {
+      font-size: 2.5rem;
+    }
+  }
+}

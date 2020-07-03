@@ -1,0 +1,46 @@
+@use '../global.scss';
+div.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 14px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1em;
+}
+div.grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  .col {
+    display: block;
+  }
+  @include global.responsive(700px) {
+    grid-template-columns: 1fr;
+  }
+}
+.error {
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+  color: white;
+  h1 {
+    font-size: 5em;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  p {
+    margin: 7px 0;
+    font-size: 1.2rem;
+  }
+}
+.btn-retry {
+  background-color: brown;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
