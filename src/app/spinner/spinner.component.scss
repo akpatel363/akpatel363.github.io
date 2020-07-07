@@ -1,19 +1,7 @@
-.spinner-container{
-    padding: 1em 0;
-    margin: 1em 0;
-    .spinner{
-        width: 100px;
-        height: 100px;
-        box-sizing: border-box;
-        border-radius: 50px;
-        border-top: 4px solid red;
-        border-bottom: 4px solid red;
-        border-right: 4px solid red;
-        border-left: 4px solid transparent;
-        margin: 1em auto;
-        animation: 1s spinner-rotate infinite linear ;
-    }
-    @keyframes spinner-rotate{
-        to{ transform: rotate(360deg); }
-    }
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  margin: 1em 0;
 }

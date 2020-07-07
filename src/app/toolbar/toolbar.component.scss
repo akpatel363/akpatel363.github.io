@@ -1,89 +1,98 @@
 @use '../global.scss';
-div.toolbar{
+div.toolbar {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  ul {
     display: flex;
-    height: 80px;
-    align-items: center;
-    justify-content: space-between;
+    list-style: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.social {
+  margin: 0 20px;
+  button.toggle {
+    border: none;
+    line-height: 52px;
+    background-color: transparent;
+    border-radius: 26px;
+    width: 52px;
+    height: 52px;
+    display: none;
+    transition: 0.4s;
+    transition-delay: 0.3s;
+    font-size: 2em;
+    color: white;
+    &:focus {
+      outline: none;
+    }
+  }
+  li {
+    margin: 0 20px;
+    font-size: 2em;
+  }
+  @include global.responsive(700px) {
+    position: relative;
+    margin: 0 10px;
     ul {
-        display: flex;
-        list-style: none;
+      text-align: center;
+      flex-direction: column;
+      position: absolute;
+      transition: 0.3s;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 0 10px 10px 10px;
+      transform-origin: top;
+      border-radius: 0 0 30px 30px;
+      transform: scaleY(0);
+      z-index: 10;
+      li {
+        margin: 5px 0;
+      }
     }
-    a{
-        color: white;
-        text-decoration: none;
+    button.toggle {
+      display: block;
     }
+    &.active {
+      ul {
+        transform: scale(1);
+      }
+      button.toggle {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 26px 26px 0 0;
+        transition: 0s;
+      }
+    }
+  }
 }
-.social{
-    margin: 0 20px;
-    button.toggle{
-        border: none;
-        line-height: 52px;
-        background-color: transparent;
-        border-radius: 26px;
-        width: 52px;
-        height: 52px;
-        display: none;
-        transition: .4s;
-        transition-delay: .3s;
-        font-size: 2em;
+.menu {
+  margin: 0 20px;
+  li {
+    font-weight: 700;
+    margin: 0 15px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    a {
+      color: #ddd;
+      transition: 0.3s;
+      &:hover,
+      &:focus {
         color: white;
-        &:focus{ outline: none; }
+      }
+      &.active {
+        color: white;
+        text-decoration: underline;
+      }
     }
-    li{ 
-        margin: 0 20px;
-        font-size: 2em; 
+  }
+  @include global.responsive(700px) {
+    margin: 0 10px;
+    li {
+      font-size: 1em;
+      margin: 0 12px;
     }
-    @include global.responsive(700px){
-        position: relative;
-        margin: 0 10px;
-        ul{
-            text-align: center;
-            flex-direction: column;
-            position: absolute;
-            transition: .3s;
-            background: rgba(0, 0, 0, .9);
-            padding: 0 10px 10px 10px;
-            transform-origin: top;
-            border-radius: 0 0 30px 30px;
-            transform: scaleY(0);
-            z-index: 10;
-            li{ margin: 5px 0; }
-        }
-        button.toggle{ display: block; }
-        &.active{
-            ul{ transform: scale(1); }
-            button.toggle{
-                background-color: rgba(0, 0, 0, .9);
-                border-radius: 26px 26px 0 0;
-                transition: 0s;
-            }
-        }
-    }
-}
-.menu{
-    margin: 0 20px;
-    li{
-        font-weight: 700;
-        margin: 0 15px;
-        font-size: 1.2em;
-        text-transform: uppercase;
-        a{
-            color: #ddd;
-            transition: .3s;
-            &:hover, &:focus{
-                color: white;
-            }
-            &.active{
-                color: white;
-                text-decoration: underline;
-            }
-        }
-    }
-    @include global.responsive(700px){
-        margin: 0 10px;
-        li{
-            font-size: 1em;
-            margin: 0 12px;
-        }
-    }
+  }
 }

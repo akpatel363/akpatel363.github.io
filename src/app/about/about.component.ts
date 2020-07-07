@@ -10,13 +10,13 @@ import { animate, trigger, query, transition, style, group } from '@angular/anim
       transition('void => *', [
         group([          
           query('h1.title',[
-            style({ opacity: 0, transform: 'translateX(-100px)' }), animate('.7s ease-out')
+            style({ opacity: 0, transform: 'translateX(-100px)' }), animate('.5s ease-out')
           ]),
           query('p',[
-            style({ opacity: 0, transform: 'translateY(100px)' }), animate('.7s ease-out')
+            style({ opacity: 0, transform: 'translateY(100px)' }), animate('.5s ease-out')
           ]),
           query('a.btn',[
-            style({ opacity: 0, transform: 'translateY(100px)' }), animate('.7s ease-out')
+            style({ opacity: 0, transform: 'translateY(100px)' }), animate('.5s ease-out')
           ])
         ])
       ])

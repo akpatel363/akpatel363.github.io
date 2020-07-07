@@ -1,14 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ProjectComponent } from './project/project.component';
-import { DefaultPipe } from './default.pipe';
+import { DefaultPipe } from './commons/default.pipe';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { DetailsComponent } from './details/details.component';
 
@@ -21,15 +21,15 @@ import { DetailsComponent } from './details/details.component';
     ProjectComponent,
     DefaultPipe,
     SpinnerComponent,
-    DetailsComponent
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

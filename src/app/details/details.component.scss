@@ -15,6 +15,8 @@
   min-height: 100px;
   top: 50%;
   left: 50%;
+  margin: 0 auto;
+  transform-origin: top;
   border-radius: 14px;
   z-index: 20;
   transform: translate(-50%, -50%);

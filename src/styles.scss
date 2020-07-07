@@ -13,8 +13,13 @@
   display: inline-block;
   border: 2px solid white;
   box-sizing: border-box;
+  box-shadow: 0 0 8px rgba(0,0,0,.4);
   border-radius: 6px;
+  transition: .3s;
 }
 .btn:focus {
   outline: none;
+}
+.btn:hover{
+  box-shadow: none;
 }
