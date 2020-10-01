@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { animate, trigger, query, transition, style, group } from '@angular/animations'
+import { Component } from '@angular/core';
+import {
+  animate,
+  trigger,
+  query,
+  transition,
+  style,
+  group,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-about',
@@ -8,26 +15,24 @@ import { animate, trigger, query, transition, style, group } from '@angular/anim
   animations: [
     trigger('aboutAnimation', [
       transition('void => *', [
-        group([          
-          query('h1.title',[
-            style({ opacity: 0, transform: 'translateX(-100px)' }), animate('.5s ease-out')
+        group([
+          query('h1.title', [
+            style({ opacity: 0, transform: 'translateX(-100px)' }),
+            animate('.5s ease-out'),
           ]),
-          query('p',[
-            style({ opacity: 0, transform: 'translateY(100px)' }), animate('.5s ease-out')
+          query('p', [
+            style({ opacity: 0, transform: 'translateY(100px)' }),
+            animate('.5s ease-out'),
           ]),
-          query('a.btn',[
-            style({ opacity: 0, transform: 'translateY(100px)' }), animate('.5s ease-out')
-          ])
-        ])
-      ])
-    ])
-  ]
+          query('a.btn', [
+            style({ opacity: 0, transform: 'translateY(100px)' }),
+            animate('.5s ease-out'),
+          ]),
+        ]),
+      ]),
+    ]),
+  ],
 })
-export class AboutComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class AboutComponent {
+  constructor() {}
 }

@@ -1,22 +1,27 @@
 <div class="container">
-    <div *ngIf="repos != null; else spinner" @projectsAnim>
-        <h1>Projects</h1>
-        <div class="grid">
-            <div class="col" *ngFor="let r of repos; index as i" (click)="selectproject(i)" @cardAnim>
-                <project [p]="r"></project>
-            </div>
-        </div>
+  <div *ngIf="repos != null; else spinner" @projectsAnim>
+    <h1>Projects</h1>
+    <div class="grid">
+      <div
+        class="col"
+        *ngFor="let r of repos; index as i"
+        (click)="selectproject(i)"
+        @cardAnim
+      >
+        <project [p]="r"></project>
+      </div>
     </div>
+  </div>
 </div>
-<project-details [p]="selected" (close)="closeDetails($event)"></project-details>
+<project-details [p]="selected" (close)="closeDetails()"></project-details>
 <ng-template #spinner>
-    <spinner *ngIf="error == null; else errorMsg"></spinner>
+  <spinner *ngIf="error == null; else errorMsg"></spinner>
 </ng-template>
 <ng-template #errorMsg>
-    <div class="error">
-        <h1><i class="fa fa-exclamation-circle"></i></h1>
-        <h2>Something went wrong</h2>
-        <p>Please check your internet connection.</p>
-        <button class="btn btn-retry" (click)="retry()">Try Again</button>
-    </div>
+  <div class="error">
+    <h1><i class="fa fa-exclamation-circle"></i></h1>
+    <h2>Something went wrong</h2>
+    <p>Please check your internet connection.</p>
+    <button class="btn btn-retry" (click)="retry()">Try Again</button>
+  </div>
 </ng-template>

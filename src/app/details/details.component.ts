@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import {
   trigger,
   state,
@@ -13,20 +13,21 @@ import {
   styleUrls: ['./details.component.scss'],
   animations: [
     trigger('detailsAnim', [
-      state('void', style({ opacity: 0, transform: 'translate(-50%,50%) scaleY(0)' })),
-      state('*', style({ opacity: 1, transform: 'translate(-50%,-50%) scaleY(1)' })),
+      state(
+        'void',
+        style({ opacity: 0, transform: 'translate(-50%,50%) scaleY(0)' })
+      ),
+      state(
+        '*',
+        style({ opacity: 1, transform: 'translate(-50%,-50%) scaleY(1)' })
+      ),
       transition('void <=> *', [animate('.2s ease-out')]),
     ]),
   ],
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent {
   @Input() p: any;
   @Output() close = new EventEmitter<boolean>();
   constructor() {}
-
-  ngOnInit(): void {}
-
-  closeDetails() {
-    this.close.emit(true);
-  }
+  closeDetails = () => this.close.emit(true);
 }

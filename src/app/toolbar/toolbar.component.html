@@ -1,17 +1,31 @@
 <div class="toolbar">
-    <div class="social" #social>
-        <button class="toggle" (click)="toggle()"><i class="fa fa-user" #icon></i></button>
-        <ul>
-            <li><a href="https://github.com/akpatel363"><i class="fa fa-github"></i></a></li>
-            <li><a href="mailto:akpatel363@gmail.com"><i class="fa fa-envelope"></i></a></li>
-            <li><a href=""><i class="fa fa-stack-overflow"></i></a></li>
-            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-        </ul>
-    </div>
-    <div class="menu">
-        <ul>
-            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-        </ul>
-    </div>
+  <div class="social" #social>
+    <button class="toggle" (click)="toggle()">
+      <i class="fa fa-user" #icon></i>
+    </button>
+    <ul>
+      <li>
+        <a href="https://github.com/akpatel363"><i class="fa fa-github"></i></a>
+      </li>
+      <li>
+        <a href="mailto:akpatel363@gmail.com"><i class="fa fa-envelope"></i></a>
+      </li>
+      <li>
+        <a href="https://stackoverflow.com/users/12256614/akash-patel"
+          ><i class="fa fa-stack-overflow"></i
+        ></a>
+      </li>
+      <li>
+        <a href="https://linkedin.com/in/akashpatel363"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <div class="menu">
+    <ul>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+    </ul>
+  </div>
 </div>

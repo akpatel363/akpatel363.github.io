@@ -4,13 +4,13 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
-  { path: '', pathMatch:'full', redirectTo:'about'},
+  { path: '', pathMatch: 'full', redirectTo: 'about' },
   { path: 'about', component: AboutComponent },
-  { path: 'projects', component: ProjectsComponent }
+  { path: 'projects', component: ProjectsComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

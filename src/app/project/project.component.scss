@@ -8,7 +8,12 @@ div.card {
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 1em;
+  transition: 0.3s;
   overflow: hidden;
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+  }
   .card-design {
     z-index: 0;
     background: linear-gradient(45deg, orange, yellow);

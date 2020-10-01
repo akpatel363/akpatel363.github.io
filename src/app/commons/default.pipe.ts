@@ -1,15 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'default'
+  name: 'default',
 })
 export class DefaultPipe implements PipeTransform {
-
   transform(value: unknown, ...args: unknown[]): unknown {
-    if (!value){
-      return 'No Description.'
+    if (!value) {
+      return 'No Description.';
     }
     return value;
   }
-
 }
